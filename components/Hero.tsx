@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 // Components
-import BackgroundCircles from "./BackgroundCircles";
+import BackgroundCircles from "@/components/BackgroundCircles";
 
 type Props = {};
 
