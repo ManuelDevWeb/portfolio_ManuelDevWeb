@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 type Props = {};
 
 const ExperienceCard = ({}: Props) => {
@@ -21,7 +20,7 @@ const ExperienceCard = ({}: Props) => {
           once: true,
         }}
         src="/static/img/Cbw.png"
-        className="w-32 h-32 rounded-full object-cover"
+        className="w-32 h-32 rounded-full object-cover xl:w-[200px] xl:h-[200px]"
       ></motion.img>
     </article>
   );

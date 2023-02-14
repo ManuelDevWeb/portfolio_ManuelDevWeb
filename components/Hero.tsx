@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import { BsArrowDownCircle } from "react-icons/bs";
 
 // Components
 import BackgroundCircles from "@/components/BackgroundCircles";
@@ -9,7 +11,7 @@ type Props = {};
 
 const Hero = ({}: Props) => {
   const [text, count] = useTypewriter({
-    words: ["Hi, I'm Manuel", "Computer Engineering", "Full Stack Developer"],
+    words: ["Hi, I'm Manuel", "Do you want some coffee?", "<CodeWithLove />"],
     loop: true,
     delaySpeed: 2000,
   });
@@ -48,6 +50,26 @@ const Hero = ({}: Props) => {
           </Link>
         </div>
       </div>
+      <motion.button
+        animate={{
+          y: [0, 10],
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        className="flex gap-1 items-center justify-center space-y-2 "
+      >
+        <Link href="#about">
+          <BsArrowDownCircle
+            // Friendlier hover effect
+            className="hover:text-[#F7AB0A] h-6 w-6"
+          />
+        </Link>
+      </motion.button>
     </div>
   );
 };
