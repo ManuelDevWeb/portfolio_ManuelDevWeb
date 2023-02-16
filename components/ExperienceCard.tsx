@@ -1,9 +1,27 @@
 import { motion } from "framer-motion";
-type Props = {};
+import Image from "next/image";
 
-const ExperienceCard = ({}: Props) => {
+type Props = {
+  company: string;
+  position: string;
+  logo: string;
+  technologies: string[];
+  startDate: string;
+  endDate: string;
+  description: string[];
+};
+
+const ExperienceCard = ({
+  company,
+  position,
+  logo,
+  technologies,
+  startDate,
+  endDate,
+  description,
+}: Props) => {
   return (
-    <article className="flex flex-col rounded-l items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article className="flex flex-col rounded-l items-center space-y-7 flex-shrink-0 lg:flex-shrink w-[300px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] py-10 px-4 md:px-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
       <motion.img
         initial={{
           x: -100,
@@ -19,73 +37,33 @@ const ExperienceCard = ({}: Props) => {
         viewport={{
           once: true,
         }}
-        src="/static/img/Cbw.png"
-        className="w-32 h-32 rounded-full object-cover xl:w-[200px] xl:h-[200px]"
+        src={`/static/img/${logo}`}
+        className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover xl:w-[200px] xl:h-[200px]"
         alt=""
       />
 
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Front End Developer</h4>
-        <p className="font-bold text-2x mt-1">SCRINIO</p>
-        <div className="flex space-x-2 my-2">
-          <img
-            className="h-10 w-10 "
-            src="/static/img/React.svg"
-            alt="React Logo"
-          />
-          <img
-            className="h-10 w-10 rounded-full"
-            src="/static/img/Typescript.svg"
-            alt="Typescript Logo"
-          />
-          <img
-            className="h-10 w-10 "
-            src="/static/img/Nextjs.svg"
-            alt="Nextjs Logo"
-          />
-          <img
-            className="h-10 w-10  "
-            src="/static/img/Sass.svg"
-            alt="Sass Logo"
-          />
-          <img
-            className="h-10 w-10 "
-            src="/static/img/Redux.svg"
-            alt="Redux Logo"
-          />
-          <img
-            className="h-10 w-10 "
-            src="/static/img/Node.svg"
-            alt="Nodejs Logo"
-          />
-          <img
-            className="h-10 w-10 bg-white rounded-full"
-            src="/static/img/Aws.svg"
-            alt="Aws Logo"
-          />
+        <h4 className="text-2xl md:text-4xl font-light">{position}</h4>
+        <p className="font-bold text-2x mt-1">{company}</p>
+        <div className="flex space-x-2 my-1 md:my-2">
+          {technologies?.map((technology, index) => (
+            <Image
+              key={`${technology}-${index}`}
+              width={40}
+              height={40}
+              className={`${technology === "Typescript" && "rounded-full"}`}
+              src={`/static/img/${technology}.svg`}
+              alt={`${technology} Logo`}
+            />
+          ))}
         </div>
-        <p className="uppercase py-5 text-gray-300">OCT 2021 - MAR 2022</p>
-        <ul className="list-disc space-y-4 ml-5 text-lg">
-          <li>
-            Summary points Summary points Summary points Summary points Summary
-            points
-          </li>
-          <li>
-            Summary points Summary points Summary points Summary points Summary
-            points
-          </li>
-          <li>
-            Summary points Summary points Summary points Summary points Summary
-            points
-          </li>
-          <li>
-            Summary points Summary points Summary points Summary points Summary
-            points
-          </li>
-          <li>
-            Summary points Summary points Summary points Summary points Summary
-            points
-          </li>
+        <p className="uppercase py-5 text-gray-300">
+          {startDate} - {endDate}
+        </p>
+        <ul className="list-disc space-y-2 md:space-y-4 ml-5 md:text-lg">
+          {description?.map((item, index) => (
+            <li key={`${item}-${index}`}>{item}</li>
+          ))}
         </ul>
       </div>
     </article>
