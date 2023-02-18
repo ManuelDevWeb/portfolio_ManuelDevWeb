@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 type Props = {
-  company: string;
-  position: string;
-  logo: string;
-  technologies: string[];
-  startDate: string;
-  endDate: string;
-  description: string[];
+  company?: string;
+  position?: string;
+  logo?: string;
+  technologies?: string[];
+  startDate?: string;
+  endDate?: string;
+  description?: string[];
 };
 
 const ExperienceCard = ({
