@@ -5,6 +5,7 @@ type Props = {
   name?: string;
   picture?: string;
   development?: string;
+  description?: string;
 };
 
 const Project = ({ picture, name, development }: Props) => {
