@@ -8,5 +8,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    // Plugin to modify scrollbar
+    require("tailwind-scrollbar"),
+  ],
 };

@@ -23,7 +23,11 @@ const WorkExperience = ({}: Props) => {
         Experience
       </h3>
 
-      <div className="w-full flex space-x-5 overflow-x-scroll lg:overflow-x-hidden p-10 snap-x snap-mandatory mt-24 md:mt-20">
+      <div
+        className="w-full flex space-x-5 overflow-x-scroll lg:overflow-x-hidden p-10 snap-x snap-mandatory mt-24 md:mt-20 scrollbar scrollbar-track-gray-400/20
+        scrollbar-thumb-[#F7AB0A]/80
+      "
+      >
         <ExperienceCard
           company={"CBW Agencia"}
           position={"Front End Developer"}
