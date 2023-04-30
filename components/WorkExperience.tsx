@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 // Components
-import ExperienceCard from "@/components/ExperienceCard";
+import { ExperienceCard } from "@/components/ExperienceCard";
 
 type Props = {};
 
@@ -59,4 +59,4 @@ const WorkExperience = ({}: Props) => {
   );
 };
 
-export default WorkExperience;
+export { WorkExperience };

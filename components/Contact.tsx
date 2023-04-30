@@ -94,4 +94,4 @@ const Contact = ({}: Props) => {
   );
 };
 
-export default Contact;
+export { Contact };

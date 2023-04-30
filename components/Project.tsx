@@ -47,4 +47,4 @@ const Project = ({ picture, name, development }: Props) => {
   );
 };
 
-export default Project;
+export { Project };

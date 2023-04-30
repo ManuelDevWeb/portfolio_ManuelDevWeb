@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { BsArrowDownCircle } from "react-icons/bs";
 
 // Components
-import BackgroundCircles from "@/components/BackgroundCircles";
+import { BackgroundCircles } from "@/components/BackgroundCircles";
 
 type Props = {};
 
@@ -63,15 +63,17 @@ const Hero = ({}: Props) => {
         }}
         className="flex gap-1 items-center justify-center space-y-2 "
       >
-        <Link href="#about">
-          <BsArrowDownCircle
-            // Friendlier hover effect
-            className="hover:text-[#F7AB0A] h-6 w-6"
-          />
-        </Link>
+        <div>
+          <Link href="#about">
+            <BsArrowDownCircle
+              // Friendlier hover effect
+              className="hover:text-[#F7AB0A] h-6 w-6"
+            />
+          </Link>
+        </div>
       </motion.button>
     </div>
   );
 };
 
-export default Hero;
+export { Hero };

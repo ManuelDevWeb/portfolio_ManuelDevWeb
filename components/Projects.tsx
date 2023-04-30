@@ -1,5 +1,5 @@
 // Components
-import Project from "@/components/Project";
+import { Project } from "@/components/Project";
 
 type Props = {};
 
@@ -33,4 +33,4 @@ const Projects = ({}: Props) => {
   );
 };
 
-export default Projects;
+export { Projects };

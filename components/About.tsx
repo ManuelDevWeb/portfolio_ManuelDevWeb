@@ -59,4 +59,4 @@ const About = ({}: Props) => {
   );
 };
 
-export default About;
+export { About };

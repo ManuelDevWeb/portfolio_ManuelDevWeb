@@ -70,4 +70,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export { ExperienceCard };

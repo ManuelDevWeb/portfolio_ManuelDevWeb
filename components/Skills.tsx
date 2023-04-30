@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 // Components
-import Skill from "@/components/Skill";
+import { Skill } from "@/components/Skill";
 
 type Props = {};
 
@@ -45,4 +45,4 @@ const Skills = ({}: Props) => {
   );
 };
 
-export default Skills;
+export { Skills };

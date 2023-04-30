@@ -27,4 +27,4 @@ const BackgroundCircles = ({}: Props) => {
   );
 };
 
-export default BackgroundCircles;
+export { BackgroundCircles };

@@ -33,4 +33,4 @@ const Skill = ({ directionLeft, logo, level }: Props) => {
   );
 };
 
-export default Skill;
+export { Skill };

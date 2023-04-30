@@ -1,5 +1,6 @@
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {};
 
@@ -30,6 +31,7 @@ const Header = ({}: Props) => {
         <SocialIcon network="twitter" fgColor="gray" bgColor="transparent" />
       </motion.div>
 
+      {/* Generate animation with Framer Motion, is a normal div with some properties */}
       <motion.div
         initial={{
           x: 500,
@@ -47,6 +49,7 @@ const Header = ({}: Props) => {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         <SocialIcon
+          href="#contact"
           className="cursor-pointer"
           network="email"
           fgColor="gray"
@@ -60,4 +63,4 @@ const Header = ({}: Props) => {
   );
 };
 
-export default Header;
+export { Header };
